@@ -356,7 +356,7 @@
         const __email = document.getElementById('email')
         const __phoneNumber = document.getElementById('phone-number')
 
-        fetch('https://zeta-academy.herokuapp.com/booking', {
+        fetch('https://zeta-academy-c1ca329c5d11.herokuapp.com/booking', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -368,7 +368,6 @@
             email: __email.value,
             whatsapp: __phoneNumber.value
           })
-
         }).then((response) => response.text()).then((responseText) => {
           if (responseText == '200') {
             canSendForm = false;
@@ -381,10 +380,8 @@
         })
       }
       else {
-        alert('Вы уже отправили заявку, ждите ответа от менеджера')
+        alert('Вы уже отправили заявку, ждите ответа от менеджера, или обновите страницу')
       }
-
-
     })
 
   </script>
